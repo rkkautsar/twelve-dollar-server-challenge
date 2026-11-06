@@ -43,7 +43,7 @@ fn main() -> io::Result<()> {
     let shards = env::var("SHARDS")
         .ok()
         .and_then(|v| v.parse::<usize>().ok())
-        .unwrap_or(8)
+        .unwrap_or(16)
         .clamp(1, 16);
     let addr = format!("{host}:{port}");
 
